@@ -34,7 +34,10 @@ const WorkExperienceSegment = (props: WorkExperienceSegmentProps) => {
       <ul>
         {props.workExperience.experience.map(
           (experience, experiencePointIndex) => (
-            <li key={experiencePointIndex}>{experience}</li>
+            <li
+              key={experiencePointIndex}
+              dangerouslySetInnerHTML={{ __html: experience }}
+            ></li>
           ),
         )}
       </ul>

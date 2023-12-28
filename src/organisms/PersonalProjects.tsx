@@ -14,7 +14,9 @@ const PersonalProjects = (props: PersonalProjectsProps) => {
         {props.personalProjectsData.map((project) => (
           <li key={project.heading}>
             <h4>{project.heading}</h4>
-            {project.description}
+            <span
+              dangerouslySetInnerHTML={{ __html: project.description }}
+            ></span>
             {project.link && (
               <>
                 <br />
