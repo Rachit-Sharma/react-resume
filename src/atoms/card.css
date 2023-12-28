@@ -1,0 +1,9 @@
+.card {
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow:
+    0 0 5px 2px var(--card-shadow-color-1),
+    0 0 10px -3px var(--card-shadow-color-2),
+    0 0 20px -1px var(--card-shadow-color-3);
+  background: color-mix(in oklab, var(--card-bg-core-color) 50%, transparent);
+}

@@ -1,0 +1,177 @@
+:root {
+  --color-gray-500: oklch(50% 0 0);
+  --color-gray-50: color-mix(in oklab, var(--color-gray-500) 10%, white);
+  --color-gray-100: color-mix(in oklab, var(--color-gray-500) 20%, white);
+  --color-gray-200: color-mix(in oklab, var(--color-gray-500) 40%, white);
+  --color-gray-300: color-mix(in oklab, var(--color-gray-500) 60%, white);
+  --color-gray-400: color-mix(in oklab, var(--color-gray-500) 80%, white);
+  --color-gray-600: color-mix(in oklab, var(--color-gray-500) 80%, black);
+  --color-gray-700: color-mix(in oklab, var(--color-gray-500) 60%, black);
+  --color-gray-800: color-mix(in oklab, var(--color-gray-500) 40%, black);
+  --color-gray-900: color-mix(in oklab, var(--color-gray-500) 20%, black);
+  --color-gray-950: color-mix(in oklab, var(--color-gray-500) 10%, black);
+
+  --color-red-500: oklch(50% 0.2002 30);
+  --color-red-50: color-mix(in oklab, var(--color-red-500) 10%, white);
+  --color-red-100: color-mix(in oklab, var(--color-red-500) 20%, white);
+  --color-red-200: color-mix(in oklab, var(--color-red-500) 40%, white);
+  --color-red-300: color-mix(in oklab, var(--color-red-500) 60%, white);
+  --color-red-400: color-mix(in oklab, var(--color-red-500) 80%, white);
+  --color-red-600: color-mix(in oklab, var(--color-red-500) 80%, black);
+  --color-red-700: color-mix(in oklab, var(--color-red-500) 60%, black);
+  --color-red-800: color-mix(in oklab, var(--color-red-500) 40%, black);
+  --color-red-900: color-mix(in oklab, var(--color-red-500) 20%, black);
+  --color-red-950: color-mix(in oklab, var(--color-red-500) 10%, black);
+
+  --color-green-500: oklch(50% 0.1371 150);
+  --color-green-50: color-mix(in oklab, var(--color-green-500) 10%, white);
+  --color-green-100: color-mix(in oklab, var(--color-green-500) 20%, white);
+  --color-green-200: color-mix(in oklab, var(--color-green-500) 40%, white);
+  --color-green-300: color-mix(in oklab, var(--color-green-500) 60%, white);
+  --color-green-400: color-mix(in oklab, var(--color-green-500) 80%, white);
+  --color-green-600: color-mix(in oklab, var(--color-green-500) 80%, black);
+  --color-green-700: color-mix(in oklab, var(--color-green-500) 60%, black);
+  --color-green-800: color-mix(in oklab, var(--color-green-500) 40%, black);
+  --color-green-900: color-mix(in oklab, var(--color-green-500) 20%, black);
+  --color-green-950: color-mix(in oklab, var(--color-green-500) 10%, black);
+
+  --color-blue-500: oklch(50% 0.28 264.71);
+  --color-blue-50: color-mix(in oklab, var(--color-blue-500) 10%, white);
+  --color-blue-100: color-mix(in oklab, var(--color-blue-500) 20%, white);
+  --color-blue-200: color-mix(in oklab, var(--color-blue-500) 40%, white);
+  --color-blue-300: color-mix(in oklab, var(--color-blue-500) 60%, white);
+  --color-blue-400: color-mix(in oklab, var(--color-blue-500) 80%, white);
+  --color-blue-600: color-mix(in oklab, var(--color-blue-500) 80%, black);
+  --color-blue-700: color-mix(in oklab, var(--color-blue-500) 60%, black);
+  --color-blue-800: color-mix(in oklab, var(--color-blue-500) 40%, black);
+  --color-blue-900: color-mix(in oklab, var(--color-blue-500) 20%, black);
+  --color-blue-950: color-mix(in oklab, var(--color-blue-500) 10%, black);
+
+  --overall-inline-margin: 6rem;
+
+  --page-bg-color-1: var(--color-gray-700);
+  --page-bg-color-2: var(--color-gray-800);
+  --page-bg-color-3: var(--color-blue-950);
+  --page-bg-color-4: var(--color-blue-900);
+
+  --card-bg-core-color: var(--color-gray-800);
+  --card-shadow-color-1: var(--color-gray-700);
+  --card-shadow-color-2: var(--color-gray-500);
+  --card-shadow-color-3: var(--color-blue-300);
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+
+  color-scheme: light dark;
+  color: var(--color-gray-100);
+}
+
+body {
+  min-block-size: 100dvh;
+  margin: 0;
+}
+
+#root {
+  background: linear-gradient(
+    170deg in oklab,
+    var(--page-bg-color-1),
+    var(--page-bg-color-2) 15%,
+    var(--page-bg-color-3) 85%,
+    var(--page-bg-color-4)
+  );
+}
+
+main {
+  min-block-size: 100dvh;
+  inline-size: calc(100% - var(--overall-inline-margin));
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-block-end: 0;
+}
+
+h4 {
+  font-size: 1.3rem;
+  margin-block-end: 0;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-blue-400);
+  text-decoration: inherit;
+
+  &:hover {
+    color: var(--color-blue-300);
+  }
+}
+
+ul {
+  margin-block-start: 0.1rem;
+}
+
+li {
+  font-size: 1.1rem;
+
+  &::marker {
+    content: "↠ ";
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --page-bg-color-1: var(--color-gray-300);
+    --page-bg-color-2: var(--color-gray-100);
+    --page-bg-color-3: var(--color-blue-50);
+    --page-bg-color-4: var(--color-blue-100);
+
+    --card-bg-core-color: var(--color-gray-50);
+    --card-shadow-color-1: var(--color-gray-200);
+    --card-shadow-color-2: var(--color-gray-600);
+    --card-shadow-color-3: var(--color-blue-400);
+
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    color: var(--color-gray-800);
+  }
+
+  a {
+    color: var(--color-blue-500);
+    &:hover {
+      color: var(--color-blue-400);
+    }
+  }
+}
+
+@page {
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 75%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  :root {
+    font-size: 87.5%;
+  }
+}
